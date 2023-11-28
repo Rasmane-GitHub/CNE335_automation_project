@@ -9,15 +9,15 @@ import subprocess
 
 from Server import Server
 
-os.system("ping -n 1 3.3.11.1")
+os.system("ping -n 2 54.201.204.242")
 def print_program_info():
-    # TODO - Change your name
+    # TODO - Change your nameM
     print("Server Automator v0.1 by Your Name")
 
 # This is the entry point to our program
 if __name__ == '__main__':
     print_program_info()
-    server_ip = "3.3.11.1"
+    server_ip = "54.201.204.242"
     server = Server(server_ip)
 
 
@@ -31,16 +31,13 @@ class Server:
 
     def ping(self):
         try:
-            # Use subprocess to run the ping command and capture the output
+
             result = subprocess.check_output(["ping", "-n", "1", self.server_ip], text=True)
             return result
         except subprocess.CalledProcessError as e:
             return f"Error: {e}"
 
 
-
-
-        # TODO - Call the Ping method and print the results
 
     ping_result = server.ping()
     print(f"Ping result for {server_ip}:")
