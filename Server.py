@@ -20,7 +20,4 @@ class Server:
             # Handle errors, if any
             return f"Error: {e}"
 
-server_ip = "54.201.204.242"
-my_server = Server(server_ip)
-ping_result = my_server.ping()
-print(ping_result)
+
